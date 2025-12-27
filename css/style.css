@@ -136,7 +136,7 @@ section h3 {
 .about-image img {
   width: 300px;
   border-radius: 25px;
-  border: 3px,solid,var(--text-muted);
+  border: 3px solid var(--text-muted);
 }
 
 .about-text{
@@ -326,5 +326,32 @@ section h3 {
 
   section {
     padding: 60px 6%;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-container, 
+  .proj-container, 
+  .extra-container {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 20px; 
+  }
+  .proj-container img, 
+  .extra-img1, 
+  .extra-img2 {
+    width: 80%;     
+    max-width: 300px; 
+    height: auto;   
+    flex-shrink: 0;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+
+  section {
+    padding: 40px 20px;
   }
 }
