@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 :root {
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-light);
   line-height: 1.6;
@@ -25,8 +26,8 @@ body {
 
 header {
   background-color: var(--bg-dark);
-  padding: 16px 32px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -34,15 +35,43 @@ header {
 
 .header-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.nav-left a {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--accent-blue);
+.nav-logo {
+    flex: 1;
+}
+
+.nav-img {
+  height: 40px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.nav-links {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  gap: 42px
+}
+
+.nav-link {
+  color: var(--text-muted);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+  transition: color .2s;
+}
+
+.nav-link:active,
+.nav-link:hover {
+  color: var(--accent-blue);
+
+}
+
+.header-nav ::after {
+  flex: 1;
+  content: "";
 }
 
 section {
@@ -113,7 +142,6 @@ section h3 {
 }
 
 #about-me {
-  scroll-margin-top: 80px;
 }
 
 #about-me h3{
@@ -327,9 +355,7 @@ section h3 {
   section {
     padding: 60px 6%;
   }
-}
 
-@media (max-width: 900px) {
   .about-container, 
   .proj-container, 
   .extra-container {
