@@ -343,6 +343,10 @@ section h3 {
 }
 
 @media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
   #about-me {
     flex-direction: column;
     text-align: center;
