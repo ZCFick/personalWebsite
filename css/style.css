@@ -371,8 +371,8 @@ section h3 {
   .proj-container img, 
   .extra-img1, 
   .extra-img2 {
-    width: 80%;     
-    max-width: 300px; 
+    width: 65%;     
+    max-width: 200px; 
     height: auto;   
     flex-shrink: 0;
   }
