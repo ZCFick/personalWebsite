@@ -64,9 +64,9 @@ header {
 }
 
 .nav-link:active,
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--accent-blue);
-
 }
 
 .header-nav ::after {
