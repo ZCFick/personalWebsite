@@ -10,24 +10,24 @@ html {
 }
 
 :root {
-  --bg-dark: #1f1f1f;
-  --bg-dark-alt: #262626;
-  --text-light: #e5e5e5;
-  --text-muted: #b0b0b0;
+  --bg-light: #f8f9fa;
+  --bg-light-alt: #f5f5f5;
+  --text-dark: #242424;
+  --text-muted: #666666;
   --accent-blue: #6fb3d2;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
 header {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-light);
   padding: 10px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -39,7 +39,7 @@ header {
 }
 
 .nav-logo {
-    flex: 1;
+  flex: 1;
 }
 
 .nav-img {
@@ -52,7 +52,7 @@ header {
   display: flex;
   flex: 2;
   justify-content: center;
-  gap: 42px
+  gap: 42px;
 }
 
 .nav-link {
@@ -60,7 +60,7 @@ header {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  transition: color .2s;
+  transition: color 0.2s;
 }
 
 .nav-link:active,
@@ -69,7 +69,7 @@ header {
   color: var(--accent-blue);
 }
 
-.header-nav ::after {
+.header-nav::after {
   flex: 1;
   content: "";
 }
@@ -79,11 +79,11 @@ section {
 }
 
 section:nth-of-type(even) {
-  background-color: var(--bg-dark-alt);
+  background-color: var(--bg-light-alt);
 }
 
 section:nth-of-type(odd) {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-light);
 }
 
 section h3 {
@@ -91,6 +91,8 @@ section h3 {
   margin-bottom: 24px;
   color: var(--accent-blue);
 }
+
+/* Intro */
 
 #intro {
   min-height: 90vh;
@@ -120,7 +122,7 @@ section h3 {
   text-align: center;
   max-width: 620px;
   margin-bottom: 30px;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 .nav-btn {
@@ -138,24 +140,23 @@ section h3 {
 
 .nav-btn:hover {
   background-color: var(--accent-blue);
-  color: var(--bg-dark);
+  color: var(--bg-light);
 }
 
-#about-me {
-}
+/* About Me */
 
-#about-me h3{
+#about-me h3 {
   text-align: center;
 }
 
-.about-container{
+.about-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 50px;
 }
 
-.about-image{
+.about-image {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -167,21 +168,14 @@ section h3 {
   border: 3px solid var(--text-muted);
 }
 
-.about-text{
+.about-text {
   flex: 1;
   justify-content: flex-start;
 }
 
-.about-text h4 {
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--text-muted);
-  margin-bottom: 20px;  
-}
-
 .about-text p {
   margin-bottom: 16px;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 .button-container {
@@ -190,7 +184,8 @@ section h3 {
   gap: 14px;
 }
 
-.button-container .github-button,.button-container .linkedin-button {
+.button-container .github-button,
+.button-container .linkedin-button {
   padding: 10px 18px;
   background-color: transparent;
   border: 2px solid var(--accent-blue);
@@ -200,13 +195,16 @@ section h3 {
   text-decoration: none;
 }
 
-.button-container .github-button:hover, .button-container .linkedin-button:hover {
+.button-container .github-button:hover,
+.button-container .linkedin-button:hover {
   background-color: var(--accent-blue);
-  color: var(--bg-dark);
+  color: var(--bg-light);
 }
 
+/* Work Experience */
+
 .exp-container {
-  background-color: #2b2b2b;
+  background-color: #f0f0f0;
   padding: 24px;
   border-radius: 12px;
   margin-bottom: 24px;
@@ -224,12 +222,21 @@ section h3 {
   font-weight: 400;
 }
 
-.exp-container p {
+.exp-container ul {
   margin-top: 12px;
+  padding-left: 0;
+  list-style-position: inside;
 }
 
+.exp-container li {
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+/* Projects */
+
 .proj-container {
-  background-color: #2b2b2b;
+  background-color: #f0f0f0;
   padding: 24px;
   border-radius: 12px;
   margin-bottom: 30px;
@@ -238,18 +245,23 @@ section h3 {
   gap: 25px;
 }
 
-.proj-container img{
+.proj-container img {
   width: 15%;
   height: auto;
   border-radius: 5px;
 }
 
-.proj-info {
+.project-info {
   flex: 1;
 }
 
-.proj-container h4{
+.proj-container h4 {
   font-size: 22px;
+  color: var(--text-dark);
+}
+
+.proj-container p {
+  color: var(--text-dark);
 }
 
 .skills-container {
@@ -261,7 +273,7 @@ section h3 {
 .skills-container p {
   padding: 5px 12px;
   border-radius: 20px;
-  background-color: #3a3a3a;
+  background-color: #e1e5e7;
   color: var(--accent-blue);
   font-size: 14px;
   margin-bottom: 5px;
@@ -280,12 +292,13 @@ section h3 {
 
 .github-button:hover {
   background-color: var(--accent-blue);
-  color: var(--bg-dark);
+  color: var(--bg-light);
 }
 
+/* Extracurriculars */
 
 .extra-container {
-  background-color: #2b2b2b;
+  background-color: #f0f0f0;
   padding: 24px;
   border-radius: 12px;
   margin-bottom: 24px;
@@ -294,14 +307,8 @@ section h3 {
   gap: 25px;
 }
 
-.extra-img1{
+.extra-img1 {
   width: 21%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.extra-img2{
-  width: 15%;
   height: auto;
   border-radius: 5px;
 }
@@ -324,56 +331,38 @@ section h3 {
 
 .extra-container p {
   margin-top: 12px;
+  color: var(--text-dark);
 }
 
-.footer-bar {
-  background-color: #181818;
-  padding: 18px 30px;
-  text-align: center;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.6);
+#extracurriculars {
+  padding-bottom: 35vh;
 }
 
-.footer-bar a {
-  color: var(--accent-blue);
-  text-decoration: none;
-}
-
-.footer-bar a:hover {
-  text-decoration: underline;
-}
+/* Responsive Design */
 
 @media (max-width: 900px) {
   .nav-links {
     display: none;
   }
 
-  #about-me {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 220px;
-  }
-
   section {
     padding: 60px 6%;
   }
 
-  .about-container, 
-  .proj-container, 
+  .about-container,
+  .proj-container,
   .extra-container {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px; 
+    gap: 20px;
   }
-  .proj-container img, 
-  .extra-img1, 
-  .extra-img2 {
-    width: 65%;     
-    max-width: 200px; 
-    height: auto;   
+
+  .proj-container img,
+  .extra-img1 {
+    width: 65%;
+    max-width: 200px;
+    height: auto;
     flex-shrink: 0;
   }
 
@@ -383,5 +372,9 @@ section h3 {
 
   section {
     padding: 40px 20px;
+  }
+
+  #extracurriculars {
+    padding-bottom: 35vh;
   }
 }
